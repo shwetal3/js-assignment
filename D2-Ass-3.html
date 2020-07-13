@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!--program to date in other format-->
+<html>
+<head>
+</head>
+<body><h1>Program to print current day in various format</h2>
+<script>
+var date = new Date();
+var dd=date.getDate();
+var mm = date.getMonth()+1;
+var yy = date.getFullYear();
+dd=(dd<10)?'0'+dd:dd;
+mm=(mm<10)?'0'+mm:mm;
+document.write(mm+'-'+dd+'-'+yy);
+document.write("<br>");
+document.write(mm+'/'+dd+'/'+yy);document.write("<br>");
+document.write(dd+'-'+mm+'-'+yy);document.write("<br>");
+document.write(dd+'/'+mm+'/'+yy);
+</script>
+</body>
+</html>
