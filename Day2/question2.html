@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+<!--program to date in other format-->
+<html>
+<head>
+</head>
+<body>
+<h1>Methods of string and array.</h1>
+<script>
+  var name= "Shwetal solanki";
+   console.log(name.constructor);//reference to function
+   console.log(name.charAt(8));//find char at specified position.
+   console.log(name.charCodeAt(8));//find unicode of char.
+   console.log(name.indexOf('i'));//find index of char.
+   console.log(name.endsWith('k'));//find that string ends with particular value or not.
+   console.log(name.includes('o'));//string contains paticular char or nt.
+   <!-- console.log(name.lastIndeOf("solanki"));//last index  -->
+   console.log(name.search('solanki'));//search index of string.
+   console.log(name.match(/hwetal/g));//search a string formatch 
+   //expression and return array object
+   name.repeat(2);
+   console.log(name);
+   console.log(name.concat("!"));//concat two string
+   console.log(name.replace("solanki","parmar"));//replace
+   console.log(name.slice(0,6));//form 0 to 6 string print
+   console.log(name.split("solanki"));//return array
+   console.log(name.substr(0,4));//new string from it
+   
+   var num=[20,2,30,100];
+   var a=[2,3,99];
+   console.log(num.join('   '));//join the value between each values of array.
+   console.log(num.pop());//remove the last element.
+   console.log(num.shift());//remove first
+   console.log(num.push(30));//add last element and returns length.
+   console.log(num);//return array as obj and length of array.
+   console.log(num.unshift(200));//add at first index and retrn length.
+    console.log(num[0]=20);//change the index and set this as first.
+	 console.log(delete num[3]);//delete element and return true or not.
+	  console.log(num.splice(1,0,5,6,7,8));//return obj of deleted element.
+	  //in this case 0 deleted.
+	   console.log(num.slice(2));//return new array from 2 .
+	   console.log(a.concat(num));//concat two arrays.
+</script>
+</body>
+</html>
