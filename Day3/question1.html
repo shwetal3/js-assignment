@@ -1,0 +1,25 @@
+<!DOCTYPE html> 
+<html>
+<head>
+</head>
+<body>
+<h1>Take a number from user and write a function which checks whether 
+the number is even or odd.Assign the result to var and log that var in console. </h1>
+<script>
+  var num=prompt("Enter num");//take a number from user
+  function checknum(num)
+  {
+  var result;
+  if(num%2==0)
+  {
+  return "even";
+  }
+  else
+   return "odd";
+  }
+  var result = checknum(num);
+<!-- checknum(); -->
+console.log(`The number entered is ${num} and Number is ${result}`); 
+</script>
+</body>
+</html>
