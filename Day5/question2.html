@@ -6,14 +6,14 @@
 <body>
 <h2>Question2</h2>
 <script>
-class User
+class User//class with properties as name,age & email.
 {
 constructor(name,age,email)
 {
 this.name=name;
 this.age=age;
 this.email=email;
-this.courses=[];
+this.courses = [];
 }
 login()
 {
@@ -22,7 +22,7 @@ return this;
 }
 logout()
 {
-console.log(`${this.name},You ar logged out!We will miss u!`);
+console.log(`${this.name},You are logged out!We will miss u!`);
 return this;
 }
 }
@@ -36,7 +36,7 @@ this.coins=coins;
 Addcoins()
 {
 this.coins++;
-console.log(`${this.name} has ${this.coins} after adiing coin`);
+console.log(`${this.name} has ${this.coins} after adding coin`);
 return this;
 }
 Removecoins()
@@ -51,22 +51,42 @@ class Admin extends Moderator
 Addcourse(user,course)
 {
 user.courses.push(course);
-console.log(`${course} course added suceesfuly to ${users}`);
+console.log(`${course} course added suceesfuly to ${user.name}`);
+       console.log(user);
+//console.log(`${course} course added suceesfuly to ${user.name}`);
+}
+Deletcourse(user,course)
+{
+user.courses.pop(course);
+console.log(user);
+console.log(`${course} course Deleted suceesfuly to ${user.name}`);
 }
 }
-let user1=new Moderator('Shwetal',19,'shwetal99@gmail.com',2);
-let sona = new Admin('s',2,'shwetal99@gmail',9);
-let user2=new User('Sona',20,'shwetal3@gmail.com',20);
-let users =[user1,user2,sona];
-sona.login();
-sona.Addcourse(sona,'java');
-sona.Addcourse(sona,'python');
-user1.login().Addcoins().Addcoins().Addcoins().Removecoins().logout();
-user2.login().logout();
+let user1=new User('Shwetal solanki',20,'shwetal3@gmail.com');
+let user2=new Moderator('kuldip',19,'shwetal99@gmail.com',2);
+let user3=new Moderator('Sona',20,'shwetal3@gmail.com',50);
+let user4 = new Admin('kesha',2,'shwetal99@gmail',9);
+let users =[user1,user2,user3,user4];
+users.forEach(element => {
+ console.log(element);
+});
+user1.login();
+//user1.login().Addcoins().Removecoins().Addcoins().Addcoins().logout(); user1 can't access
+//Addcoins or Removecoins method.
+//user2.Addcourse(user1,'java');user2 can't access Addcourse method.
+user4.Addcourse(user1,'javascript');
+user4.Addcourse(user2,'blockchain');
+user4.Addcourse(user3,'python');
+user4.Addcourse(user4,'java');
+user4.Removecourse(user4,'java');
+user2.login().Addcoins().Addcoins().Addcoins().Removecoins().logout();
+user3.login().logout();
+user4.login().logout();
 
 </script>
 </body>
 </html>
+
 
 
 
