@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Question1</title>
+</head>
+<body>
+<h2>Question1</h2>
+<script>
+let num = +prompt("Enter positive number");
+while(num<0)
+{
+num = +prompt("please enter positive number");
+}
+var arr=[];
+for(let i=1;i<=num;i++)
+{
+arr.push(i);
+}
+console.log(arr);
+let oddnum=arr.filter(num=>num%2!=0);
+let cube=oddnum.map(num=>num**3);
+console.log(oddnum);
+console.log(cube);
+</script>
+</body>
+</html>
+
+
+
+

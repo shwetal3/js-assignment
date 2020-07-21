@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Question2</title>
+</head>
+<body>
+<h2>Question2</h2>
+<script>
+class User
+{
+constructor(name,age,email)
+{
+this.name=name;
+this.age=age;
+this.email=email;
+this.courses=[];
+}
+login()
+{
+console.log(`Welcome ${this.name}!Thanks for login`);
+return this;
+}
+logout()
+{
+console.log(`${this.name},You ar logged out!We will miss u!`);
+return this;
+}
+}
+class Moderator extends User
+{
+constructor(name,age,email,coins)
+{
+super(name,age,email);
+this.coins=coins;
+}
+Addcoins()
+{
+this.coins++;
+console.log(`${this.name} has ${this.coins} after adiing coin`);
+return this;
+}
+Removecoins()
+{
+this.coins--;
+console.log(`${this.name} has ${this.coins} coins after removing coins.`);
+return this;
+}
+}
+class Admin extends Moderator
+{
+Addcourse(user,course)
+{
+user.courses.push(course);
+console.log(`${course} course added suceesfuly to ${users}`);
+}
+}
+let user1=new Moderator('Shwetal',19,'shwetal99@gmail.com',2);
+let sona = new Admin('s',2,'shwetal99@gmail',9);
+let user2=new User('Sona',20,'shwetal3@gmail.com',20);
+let users =[user1,user2,sona];
+sona.login();
+sona.Addcourse(sona,'java');
+sona.Addcourse(sona,'python');
+user1.login().Addcoins().Addcoins().Addcoins().Removecoins().logout();
+user2.login().logout();
+
+</script>
+</body>
+</html>
+
+
+
+
