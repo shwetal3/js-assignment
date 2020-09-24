@@ -1,0 +1,92 @@
+body
+{
+	background-color: black;
+}
+
+/* #container 
+{
+	background-color: white;
+	width: 1000px;
+	height: 550px;
+	margin: 20px auto;
+}*/
+#calcu
+{
+	height: 550px;
+	width: 320px;
+	background-color:white;
+	margin: 50px 450px;
+	position: relative;
+	/*border-radius: 20px;*/
+}
+.eq
+{
+	border:2px solid black;
+	width:87%;
+	height:10%;
+	margin:15px;
+}
+#screen
+{
+	height:50px;
+	width:270px;
+	margin:20px;
+	text-align: center;
+	font-size:50px;
+	border:2px solid black;
+}
+#keyboard
+{
+	height:400px;
+}
+.operator,.number,.empty
+{
+	width: 50px;
+	height: 50px;
+	margin: 15px;
+	border-width: 0;
+	font-weight: bold;
+	font-size: 15px;
+	float: left;
+}
+.operator
+{
+	background-color: #20b2aa;
+}
+.number,.empty
+{
+		background-color:#ffa500;
+}
+.number,.operator
+{
+	cursor: pointer;
+}
+.operator:active,.number:active
+{
+	font-size: 25px;
+}
+button:nth-child(4)
+{
+		/* background-color:#20b2aa; */
+		font-size: 20px;
+}
+button:nth-child(8)
+{
+		/* background-color:#ffa500; */
+		font-size: 20px;
+}
+button:nth-child(15)
+{
+		background-color:#7d93e0;
+		font-size: 20px;
+}
+button:nth-child(16)
+{
+		background-color:#7d93e0;
+		font-size: 20px;
+}
+button:nth-child(20)
+{
+		background-color:#9477af;
+		font-size: 20px;
+}
